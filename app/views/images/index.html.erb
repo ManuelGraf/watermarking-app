@@ -1,0 +1,6 @@
+<% for image in @images do %>
+  <%= link_to image_tag(image.file.url(:thumb)), image %><br>
+  <%= link_to "delete", image, :method => :delete %>  
+  <hr>
+<% end %>
+<%= link_to "upload", upload_images_path %>
